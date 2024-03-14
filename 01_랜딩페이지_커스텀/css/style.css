@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+    font-size: 100%;
+}
+body {
+    color: #000;
+	font-family: sans-serif;
+}
+
+/*
+COMMON
+================================================ */
+p {
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+section {
+    height : 100vh;
+    scroll-snap-align: start; /*스크롤이 넘어가는 기준*/
+    background-repeat: no-repeat; /*바둑판 형식으로 반복하지 않는다.*/
+    background-size: cover;
+    background-position: center; /*해당 기준으로 축소된다*/
+}
+
+.title {
+    font-family: "Whisper", cursive;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+}
+
+
+.container {
+    overflow: auto;
+    scroll-snap-type: y mandatory; /*스크롤 방햐을 세로 방향으로 설정한다*/
+    height: 100vh;
+}
+
+/*
+HERO
+================================================ */
+.hero {
+    background-image: url(../images/co.jpg);
+    text-align: center;
+    padding-top: 10vh; /*vh는 여러 기기에서 상대적으로 사이즈를 조절해준다*/
+}
+
+/*
+MENU
+================================================ */
+.menu {
+    background-image: url(../images/pro.jpg);
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.menu-list tr {
+    font-size: 1.125rem;
+    margin-bottom: .5rem;
+    line-height: 1.7;
+}
+.menu-list th {
+    font-weight: normal;
+}
+.menu-list td {
+    padding-left: 1rem;
+}
+
+/*
+CONTACT
+================================================ */
+.contact {
+    background-image: url(../images/bl.avif);
+    text-align: center;
+    padding-top: 8vh;
+}
+
+
+.btn {
+    background: #555;
+    font-size: 1.5rem;
+    color: #555;
+    padding: 1rem 3.5rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 2rem 0 2.25rem;
+}
+.btn:hover {
+    background: #777;
+}
+.contact-sns {
+    display: flex;
+    justify-content: center;
+}
+.contact-sns a {
+    background: #fff;
+    width: 3.75rem;
+    height: 3.75rem;
+    display: inline-block;
+    margin: 0 .5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: .75rem 0 0 .125rem;
+    color: #555;;
+}
+.contact-sns a:hover {
+    background: rgba(255,255,255,.5);
+}
+
+/*
+MOBILE SIZE
+================================================ */
+@media (max-width : 700px) { /*700px 이상이면 원래 크기로 나타난다.*/
+    .title{
+        font-size : 4rem;
+    }
+    p {
+        padding : 0 1rem;
+    }
+
+    p, .menu-list th, .menu-list td {
+        font-size: 1rem;
+    }
+
+    .hero { /*히어로 상단을 12퍼센트로 하겠다*/
+        padding-top: 12vh;
+    }
+}
+/*이 코드는 미디어 쿼리를 사용하여 화면 너비가 700px 이하일 때의 스타일을 정의하고 있습니다. 미디어 쿼리는 화면의 크기나 기기의 특성에 따라 스타일을 다르게 지정할 수 있게 해줍니다.
+
+여기서 @media (max-width: 700px)는 화면 너비가 700px 이하일 때를 대상으로 합니다. 따라서 이 조건에 해당하는 경우 아래에 나오는 스타일이 적용됩니다.
+
+그 아래에는 해당 미디어 쿼리에 대한 스타일을 정의하고 있습니다:
+
+.title 클래스에 대한 스타일: 화면이 작아지면서 제목의 글꼴 크기를 4rem으로 설정합니다.
+p 요소에 대한 스타일: 문단의 좌우에 1rem의 패딩을 추가합니다.
+p 요소와 .menu-list 클래스에 있는 리스트 아이템에 대한 스타일: 폰트 크기를 1rem으로 줄입니다.
+.hero 클래스에 대한 스타일: 히어로 섹션의 상단 패딩을 12vh로 조정합니다.
+이렇게 정의된 스타일은 화면 너비가 700px 이하인 경우에만 적용됩니다.*/
