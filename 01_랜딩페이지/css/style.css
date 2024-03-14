@@ -128,7 +128,8 @@ MOBILE SIZE
         padding : 0 1rem;
     }
 
-    p, .menu-list li {
+
+    p, .menu-list th, .menu-list td {
         font-size: 1rem;
     }
 
