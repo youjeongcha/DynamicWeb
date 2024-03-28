@@ -1,0 +1,97 @@
+.page-job {
+    background-image: url('../images/bg-job.jpg'), linear-gradient(180deg, transparent 0%, transparent 50%, #F8F6F2 100%);
+    background-position: left 160p, 0, 0;
+    background-size: 70vw auto, contain;
+    background-repeat: no-repeat;
+}
+
+.page-job .btn {
+    margin-bottom: 4rem;
+}
+
+/* Table 모바일 사이즈 */
+table {
+    margin: 3.5rem 0;
+    width: 100%;
+}
+
+th,
+td {
+    display: block; /* 모바일 사이즈에서 세로로 배열 */
+}
+
+th {
+    font-weight: normal;
+    background: #F8F6F2; /* 모바일에서 제목에만 배경 색 */
+    vertical-align: middle;
+    padding: 1rem;
+}
+
+td {
+    padding: .75rem 1rem 1.75rem;
+}
+
+
+
+
+/* Timeline */
+.timeline {
+    list-style: decimal inside;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.timeline-item {
+    margin-bottom : 2rem;
+}
+
+.timeline-title {
+    font-size: 1.375rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Desktop Size */
+@media (min-width: 600px) {
+    /*Table*/
+    tr:nth-child(odd) {
+        background: #F8F6F2;
+    }
+
+    tr:nth-child(even) th{
+        background: #fff;
+    }
+
+    th,
+    td {
+        padding: 1.25rem;
+        display: table-cell;
+    }
+    th {
+        width: 24%;
+        vertical-align: middle;
+    }
+    td {
+        width: 76%;
+    }
+
+
+    /* 채용 프로세스 1234양식 수정*/
+    /* Timeline */
+    .timeline-item {
+        display: flex; /* 데스크탑에서는 가로로 배열 */
+        margin-bottom: 0;
+    }
+    .timeline-title {
+        width: 24%;
+        padding: 2rem 2.5rem 2rem 0;
+        text-align: right;
+    }
+    .timeline-content {
+        border-left: 5px solid #f8f6f2; /* 제목과 문장 사이 구분 선 */
+        width: 76%;
+        padding: 1.5rem 0 1.5rem 2.5rem;
+        position: relative;
+    }
+}
